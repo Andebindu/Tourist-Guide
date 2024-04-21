@@ -44,7 +44,7 @@ fun DetailScreen(navController: NavController, name:String,image:Int,detail:Stri
                 SmallTopAppBar(
                     title = {
                         Text(
-                            text = "Detail", color = Color.White,
+                            text = name, color = Color.White,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(10.dp),

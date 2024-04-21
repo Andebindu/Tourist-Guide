@@ -1,17 +1,15 @@
 package com.touristguide.routing
 
-import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.touristguide.ui.contact_us.ContactUsScreen
 import com.touristguide.ui.detail.DetailScreen
 import com.touristguide.ui.login.LoginScreen
 import com.touristguide.ui.main.MainScreen
-import com.touristguide.ui.model.PlaceModel
 import com.touristguide.ui.register.RegisterScreen
 import com.touristguide.ui.splash.SplashScreen
-import kotlin.math.log
 
 @Composable
 fun Navigation() {
@@ -32,6 +30,9 @@ fun Navigation() {
         }
         composable(route = Screen.MainScreen.route) {
             MainScreen(navController = navController)
+        }
+        composable(route = Screen.ContactUs.route) {
+            ContactUsScreen(navController = navController)
         }
         composable(route = Screen.Detail.route+ "/{name}"+"/{image}"+"/{detail}") {
             val name = it.arguments?.getString("name")
