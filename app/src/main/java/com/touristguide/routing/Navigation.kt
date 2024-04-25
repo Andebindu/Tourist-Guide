@@ -8,6 +8,7 @@ import com.touristguide.ui.contact_us.ContactUsScreen
 import com.touristguide.ui.detail.DetailScreen
 import com.touristguide.ui.login.LoginScreen
 import com.touristguide.ui.main.MainScreen
+import com.touristguide.ui.rateReview.RateReviewScreen
 import com.touristguide.ui.register.RegisterScreen
 import com.touristguide.ui.splash.SplashScreen
 
@@ -33,6 +34,9 @@ fun Navigation() {
         }
         composable(route = Screen.ContactUs.route) {
             ContactUsScreen(navController = navController)
+        }
+        composable(route = Screen.RateReview.route) {
+            RateReviewScreen(navController = navController)
         }
         composable(route = Screen.Detail.route+ "/{name}"+"/{image}"+"/{detail}") {
             val name = it.arguments?.getString("name")

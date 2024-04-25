@@ -48,12 +48,18 @@ fun DrawerHeader() {
 }
 
 @Composable
-fun DrawerBody(onContact: () -> Unit,onLogout: () -> Unit) {
+fun DrawerBody(onReview: () -> Unit,onContact: () -> Unit,onLogout: () -> Unit) {
     Column {
         DrawerMenuItem(
             text = "Contact Us",
             onItemClick = {
                 onContact()
+            }
+        )
+        DrawerMenuItem(
+            text = "Rate & Review",
+            onItemClick = {
+                onReview()
             }
         )
         DrawerMenuItem(

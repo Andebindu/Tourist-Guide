@@ -134,7 +134,12 @@ fun MainScreen(navController: NavController) {
             modifier = Modifier.background(color = brown),
             drawerContent = {
                 DrawerHeader()
-                DrawerBody(onContact = {
+                DrawerBody(onReview = {
+                    navController.navigate(Screen.RateReview.route)
+                    scope.launch {
+                        scaffoldState.drawerState.close()
+                    }
+                }, onContact = {
                     navController.navigate(Screen.ContactUs.route)
                     scope.launch {
                         scaffoldState.drawerState.close()
